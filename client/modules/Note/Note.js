@@ -1,11 +1,29 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// Import Style
 import styles from './Note.css';
 
-const Note = props =>
-  <li className={styles.Note} {...props}>{props.children}</li>;
+class Note extends Component {
+  render() {
+    return (
+    );
+  }
+}
 
-Note.propTypes = {
-  children: PropTypes.any,
+const mapStateToProps = (state) => {
+  return {};
 };
 
-export default Note;
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+Note.propTypes = {
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Note);

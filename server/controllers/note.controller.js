@@ -11,6 +11,7 @@ export function addNote(req, res) {
     task: note.task,
   });
   newNote.id = uuid();
+  newNote.editing = false;
   newNote.save((err, saved) => {
     if (err) {
       res.status(500).send(err);

@@ -8,6 +8,7 @@ export function addLane(req, res) {
   const newLane = new Lane(req.body);
   newLane.notes = [];
   newLane.id = uuid();
+  newLane.editing = false;
   newLane.save((err, saved) => {
     if (err) {
       res.status(500).send(err);
